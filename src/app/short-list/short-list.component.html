@@ -1,3 +1,52 @@
-<p>
-  short-list works!
-</p>
+<div class="ui-g">
+  <div class="ui-g-1 ui-md-1"></div>
+  <div class="ui-g-10 ui-md-8">
+  <h1>short-list works!</h1>
+  <br>
+  <br>
+  <br>
+    <div>
+        <!--<p-headerColumnGroup class="ui-datatable-header">
+            <p-column class="ui-column-title" header="Short List">Short List</p-column>
+            <p-column class="ui-column-title">Nr.</p-column>
+            <p-column class="ui-column-title">Summary</p-column>
+            <p-column class="ui-column-title">Optional Comments</p-column>
+            <p-column class="ui-column-title">Affected Component</p-column>
+            <p-column class="ui-column-title">Category</p-column>
+            <p-column class="ui-column-title">Priority</p-column>
+            <p-column class="ui-column-title">Responsive Role</p-column>
+            <p-column class="ui-column-title">State</p-column>
+            <p-column class="ui-column-title">Cost Model</p-column>
+            <p-column class="ui-column-title">Affects Version</p-column>
+            <p-column class="ui-column-title">Ticket in JIRA</p-column>
+            <p-column class="ui-column-title">Ticket Text</p-column>
+            <p-column class="ui-column-title">Notes</p-column>
+            <p-column class="ui-column-title">In Sprint</p-column>
+            <p-column class="ui-column-title">Updated At</p-column>
+            <p-column class="ui-column-title">Created At</p-column>
+            <p-column class="ui-column-title">Client</p-column>
+        </p-headerColumnGroup>-->
+
+        
+        
+        <input #gb type="text" placeholder="Global search">
+        <p-dataTable 
+          [value]="items|async" 
+          [tableStyleClass]="ui-datatable" 
+          [editable]="true" 
+          [responsive]="true" 
+          [resizableColumns]="true" 
+          [sortField]="number" 
+          [reorderableColumns]="true" 
+          [globalFilter]="gb" 
+          [rows]="10" 
+          [paginator]="true">
+              <header>Open Topics List</header>
+              <footer>Choose from the list.</footer>
+                  <p-column class="ui-g-2" field="shortList" header="ShortList" [sortable]="true" class="ui-column-title ui-sortable-column" ></p-column>
+                  <p-column class="ui-g-1" field="number" header="Nr." [sortable]="true" ></p-column>
+                  <p-column class="ui-g-4" field="summary" header="Summary (enthält)" [editable]="true" [sortable]="true" [filter]="true" filterMatchMode="contains" ></p-column>
+        </p-dataTable>
+                
+</div>
+

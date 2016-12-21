@@ -1,3 +1,31 @@
-<p>
-  auth works!
-</p>
+
+<div>
+  <div>
+    <h1>
+      auth works!
+    </h1>
+    <form>
+      <div >
+        <label for="name">Login Name</label>
+        <input type="text" class="ui-inputtext" pInputText id="login" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="text" class="ui-password-panel" pPassword id="alterEgo">
+      </div>
+      <button type="submit" class="ui-button-primary">Submit</button>
+    </form>
+    
+
+    <div> {{ (af.auth | async)?.uid }} </div>
+      <button (click)="overrideLogin()" pButton>Login</button>
+      <button (click)="logout()" pButton>Logout</button>
+  </div>
+</div>
+
+<form>
+  
+  
+  
+  
+</form>

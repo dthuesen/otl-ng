@@ -2,7 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { AngularFireModule, AuthProviders, AuthMethods, } from 'angularfire2';
+import { NgObjectPipesModule } from 'angular2-pipes';
 
+import { firebaseConfig } from '../environments/firebase.config';
 
 import { Ng2RoutingModule } from './app.routes'
 import { AppComponent } from './app.component';
@@ -13,9 +16,27 @@ import { AuthComponent } from './auth/auth.component';
 import { AboutComponent } from './about/about.component';
 import { NavComponent } from './nav/nav.component';
 
-import {ToolbarModule} from 'primeng/primeng';
-import {ButtonModule} from 'primeng/primeng';
+import { DataService } from './data.service'
 
+import { ToolbarModule } from 'primeng/primeng';
+import { ButtonModule } from 'primeng/primeng';
+import { InputTextModule } from 'primeng/primeng';
+import { PasswordModule } from 'primeng/primeng';
+import { DataTableModule,SharedModule } from 'primeng/primeng';
+
+
+// Must export the config
+// export const firebaseConfig = {
+//   apiKey: 'AIzaSyBG6RABAtYE_59MiD9j2-L_Z4C5i3rJOZY',
+//   authDomain: 'otl-react.firebaseapp.com',
+//   databaseURL: 'https://otl-react.firebaseio.com',
+//   storageBucket: 'otl-react.appspot.com'
+// };
+
+const myFirebaseAuthConfig = {
+  provider: AuthProviders.Google,
+  method: AuthMethods.Popup
+}
 
 @NgModule({
   declarations: [
@@ -34,8 +55,18 @@ import {ButtonModule} from 'primeng/primeng';
     Ng2RoutingModule,
     ToolbarModule,
     ButtonModule,
+    InputTextModule,
+    PasswordModule,
+    NgObjectPipesModule,
+    DataTableModule,
+    SharedModule,
+    // AngularFireModule,
+    AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig),
   ],
-  providers: [ ],
-  bootstrap: [AppComponent]
+  exports: [
+    BrowserModule,
+  ],
+  providers: [ DataService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

@@ -1,11 +1,19 @@
+<div class="ui-g">
+  <p-toolbar class="ui-g-12">
+    <div class="ui-toolbar-group-right">
+      <button 
+          pButton 
+          routerLinkActive="active-link" 
+          [routerLinkActiveOptions]="{exact: true}" 
+          label="Home" 
+          routerLink="">
+      </button>
+      <button pButton routerLinkActive="active-link" label="Topics Table" routerLink="topicstable"></button>
+      <button pButton routerLinkActive="active-link" label="Short List" routerLink="shortlist"></button>
+      <button pButton routerLinkActive="active-link" label="Auth" routerLink="auth"></button>
+      <button pButton routerLinkActive="active-link" label="About" routerLink="about"></button> 
+    </div>
+  </p-toolbar>
+</div>
 
-<p-toolbar>
-  <div class="ui-toolbar-group-right">
-    <button pButton label="Home" routerLink=""></button>
-    <button pButton label="Topics Table" routerLink="topicstable"></button>
-    <button pButton label="Short List" routerLink="shortlist"></button>
-    <button pButton label="Auth" routerLink="auth"></button>
-    <button pButton label="About" routerLink="about"></button> 
-  </div>
-</p-toolbar>
 
