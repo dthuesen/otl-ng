@@ -32,7 +32,7 @@
         <input #gb type="text" placeholder="Global search">
         <p-dataTable 
           [value]="items|async" 
-          [tableStyleClass]="ui-datatable" 
+          tableStyleClass="ui-datatable" 
           [editable]="true" 
           [responsive]="true" 
           [resizableColumns]="true" 
@@ -41,11 +41,11 @@
           [globalFilter]="gb" 
           [rows]="10" 
           [paginator]="true">
-              <header>Open Topics List</header>
+              <header >Open Topics List</header>
               <footer>Choose from the list.</footer>
-                  <p-column class="ui-g-2" field="shortList" header="ShortList" [sortable]="true" class="ui-column-title ui-sortable-column" ></p-column>
-                  <p-column class="ui-g-1" field="number" header="Nr." [sortable]="true" ></p-column>
-                  <p-column class="ui-g-4" field="summary" header="Summary (enthält)" [editable]="true" [sortable]="true" [filter]="true" filterMatchMode="contains" ></p-column>
+                  <p-column styleClass="ui-g-1" field="shortList" header="ShortList" [sortable]="true" class="ui-column-title ui-sortable-column" ></p-column>
+                  <p-column styleClass="ui-g-3" field="number" header="Nr." [sortable]="true" ></p-column>
+                  <p-column styleClass="ui-g-4" field="summary" header="Summary (enthält)" [editable]="true" [sortable]="true" [filter]="true" filterMatchMode="contains" ></p-column>
         </p-dataTable>
                 
 </div>
