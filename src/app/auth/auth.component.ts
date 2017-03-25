@@ -31,10 +31,12 @@ export class AuthComponent implements OnInit {
   login() {
     this.af.auth.login();
   }
-  overrideLogin() {
+  
+  // TODO - Not yet ready implemented
+  overrideLogin() {                 
     this.af.auth.login({
       email: 'dthuesen@gmx.de',
-      password: 'roller',
+      password: '',
     },
     {
       provider: AuthProviders.Password,
