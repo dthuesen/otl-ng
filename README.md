@@ -5,7 +5,7 @@
 ### Installing Firebase and AngularFire
 According to `http://codingthesmartway.com/angular-2-firebase-introduction/`
 
-##### 1. Paste the settings in `environments/firebase.config.ts` in the following form:
+##### 1. Paste the settings in `firebase-config-object.ts` in the following form:
 
     export const firebaseConfig = {
       apiKey: '<your-key>',
